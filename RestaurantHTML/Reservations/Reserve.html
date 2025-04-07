@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../CSS/Reserve.css">
+        <title>Dorsia Reservations</title>
+    </head>
+
+    <body>
+        <section class="NavBar">
+            <a href="../homepage.html"><img class="logo" src="../../Images/DorsiaLogo2.png" height=72px width=120px alt="logo"></a>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="../Menu/Menu.html">Menu</a></li>
+                    <li><a href="../Gallery/Gallery.html">Events</a></li>
+                    <li><a href="../Reviews/Reviews.html">Reviews</a></li>
+                    <li class="Reserve"><a href="../Reservations/Reserve.html">Reservations</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#"><button>Contact Us</button></a>
+        </section>
+
+        <section class="Reservation">
+            <div class="ReservationWrap">
+                <div class="ReservationText">
+                    <h2>Make A Reservation</h2>
+                </div>
+                
+                <form action="https://httpbin.org/get" method="get">
+                    <div class="FindTable">
+                            <form action="https://httpbin.org/get" method="get">
+                                <fieldset>
+                                    <legend>Find A Table</legend>
+                                    <div class="FindTableOptions">
+                                        <div>
+                                            <label for="reservationDate">Select a Date:</label>
+                                            <input type="date" id="reservationDate" name="reservationDate" required>
+                                        </div>
+                                        <div>
+                                            <label for="reservationTime">Select a Time:</label>
+                                            <select id="reservationTime" name="reservationTime" required>
+                                                <option value="17:00">5:00 PM</option>
+                                                <option value="17:30">5:30 PM</option>
+                                                <option value="18:00">6:00 PM</option>
+                                                <option value="18:30">6:30 PM</option>
+                                                <option value="19:00">7:00 PM</option>
+                                                <option value="19:30">7:30 PM</option>
+                                                <option value="20:00">8:00 PM</option>
+                                                <option value="20:30">8:30 PM</option>
+                                                <option value="21:00">9:00 PM</option>
+                                                <option value="21:30">9:30 PM</option>
+                                                <option value="22:00">10:00 PM</option>
+                                                <option value="22:30">10:30 PM</option>
+                                                <option value="23:00">11:00 PM</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="tableFor">Table For:</label>
+                                            <select id="tableFor" name="tableFor" required>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                
+
+                                <fieldset>
+                                    <legend>Personal Details</legend>
+                                    <div class="PersonalDetailOptions">
+                                        <div class="NameBox">
+                                            <label for="Name">Reservation Name:</label>
+                                            <input type="text" name="Name" id="Name" placeholder="Jane Doe" autocomplete="on" required>
+                                        </div>
+                                        <div class="phoneBox">
+                                            <label for="phone">Phone Number:</label>
+                                            <input type="tel" name="phone" id="phone" placeholder="0123456789" pattern="[0-9]{10}" required>
+                                        </div>
+                                        <div>
+                                            <label for="allergies">Any allergies?</label><br>
+                                            <select id="allergies" name="allergies" multiple size="5">
+                                                <option value="peanuts">Peanuts</option>
+                                                <option value="tree_nuts">Tree Nuts</option>
+                                                <option value="milk">Milk / Dairy</option>
+                                                <option value="eggs">Eggs</option>
+                                                <option value="wheat">Wheat / Gluten</option>
+                                                <option value="soy">Soy</option>
+                                                <option value="fish">Fish</option>
+                                                <option value="shellfish">Shellfish</option>
+                                                <option value="sesame">Sesame</option>
+                                                <option value="mustard">Mustard</option>
+                                                <option value="corn">Corn</option>
+                                                <option value="celery">Celery</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="diets">Select dietary preferences:</label><br>
+                                            <select id="diets" name="diets" multiple size="4">
+                                                <option value="vegan">Vegan</option>
+                                                <option value="vegetarian">Vegetarian</option>
+                                                <option value="pescatarian">Pescatarian</option>
+                                                <option value="gluten_free">Gluten-Free</option>
+                                                <option value="halal">Halal</option>
+                                                <option value="kosher">Kosher</option>
+                                                <option value="keto">Keto</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="specialRequest">Any Special Requests?</label><br>
+                                            <input type="text" name="specialRequest" id="specialRequest" autocomplete="on" placeholder="Birthday or Anniversary">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                
+                                <script>
+                                    const dateInput = document.getElementById("reservationDate");
+                                    const today = new Date().toISOString().split("T")[0];
+                                    dateInput.setAttribute("min", today);
+                                    dateInput.addEventListener("input", () => {
+                                        const selectedDate = new Date(dateInput.value);
+                                        if (selectedDate.getDay() === 0) {
+                                            alert("Dorsia is closed on Sundays. Please select another date.");
+                                            dateInput.value = "";
+                                        }
+                                    });
+                                </script>
+                                
+                                <button class="MakeReservation" type="submit" formaction="https://httpbin.org/post" formmethod="post">Make A Reservation</button>
+                            </form>
+                    </div>
+            </div>
+        </section>
+
+        <section class="Footer">
+            <div class="FooterContent">
+                <div class="FooterLogo">
+                    <a href="../../RestaurantHTML/homepage.html"><img class="logo" src="../../Images/DorsiaLogo2.png" height=72px width=120px alt="logo"></a>
+                </div>
+                <div class="FooterNav">
+                    <ul class="FooterLinks">
+                        <li class="MoreInfo">More Info</li>
+                        <li><a href="../RestaurantHTML/Menu/Menu.html">Menu</a></li>
+                        <li><a href="../RestaurantHTML/Gallery/Gallery.html">Events</a></li>
+                        <li><a href="../RestaurantHTML/Reviews/Reviews.html">Reviews</a></li>
+                        <li><a href="../RestaurantHTML/Reservations/Reserve.html">Reservations</a></li>
+                        <li><a class="cta" href="#"><button class="FooterButton">Contact Us</button></a></li>
+                        <li></li><a class="cta" href="https://www.google.com/maps?q=Dorsia,+New+York" target="_blank" rel="noopener noreferrer"><button class="FooterButton">Directions to Dorsia</button></a></li>
+                    </ul>
+                </div>
+                <div class="Hours">
+                    <ul>
+                        <li class="Hours">Hours</li>
+                        <li>Monday: 5:00 PM - 11:00 PM</li>
+                        <li>Tuesday: 5:00 PM - 11:00 PM</li>
+                        <li>Wednesday: 5:00 PM - 11:00 PM</li>
+                        <li>Thursday: 5:00 PM - 11:00 PM</li>
+                        <li>Friday: 5:00 PM - 12:00 AM</li>
+                        <li>Saturday: 5:00 PM - 12:00 AM</li>
+                        <li>Sunday: Closed</li>                       
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

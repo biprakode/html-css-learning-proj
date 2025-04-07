@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #172739;
+}
+
+li , a , button{
+    font-family: "Parisienne" , sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FAF9F6;
+    text-decoration: none;
+    padding: 0 1.25rem 0 0;
+}
+
+.nav_links li.Reserve a{
+    background-color: rgba(0, 136, 169, 1);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 30px 2.5%;
+}
+
+.logo {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #bbd9ff;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0 , 136 , 169 , 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0 , 136 , 169 , 0.8);
+}
+
+.Reservation * {
+    background-color: #123A4F
+}
+
+.ReservationWrap {
+    position: relative;
+    width: 95%;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ReservationText {
+    font-family: "Parisienne", sans-serif;
+    font-size: 3.5rem;
+    padding: 2.5% 2.5% 0 2.5%;
+    color: #0088a9;
+    text-align: left;
+}
+
+fieldset {
+    border: 1px solid #A2BEE1;
+    position: relative;
+    width: 95%;
+    border-width: 5px;
+    margin: 1.5% 2.5% 2.5% 2.5%;
+    padding:2.5%;
+    border-radius: 20px;
+}
+
+fieldset legend {
+    font-family: "Parisienne", sans-serif;
+    font-size: 2.5rem;
+    padding: 0 1% 0 1%;
+    color: #047998;
+    text-align: left;
+}
+
+fieldset .FindTableOptions {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5%;
+}
+
+.FindTableOptions label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #00c8ff;
+}
+
+.FindTableOptions input,
+.FindTableOptions select {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    padding: 2.5%;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #A2BEE1;
+    background-color: #172739;
+    color: #FAF9F6;
+}
+
+.FindTableOptions input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #a9c6de;
+}
+
+fieldset .PersonalDetailOptions {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20%;
+}
+
+.PersonalDetailOptions div {
+    padding: 0 0 5% 0;
+}
+
+.PersonalDetailOptions label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0 0 2.5% 0;
+    color: #00c8ff;
+}
+
+.PersonalDetailOptions input,
+.PersonalDetailOptions select {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    padding: 2.5%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #A2BEE1;
+    background-color: #172739;
+    color: #FAF9F6;
+}
+
+.PersonalDetailOptions select,
+.FindTableOptions select {
+    width: 100%;      
+    height: 2rem; 
+    font-size: 1rem;
+}
+
+#allergies,
+#diets {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.25rem;
+    background-color: #172739;
+}
+
+#allergies option:checked,
+#diets option:checked {
+    background-color: #047998;
+    color: white;
+}
+
+.PersonalDetailOptions input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #a9c6de;
+}
+
+.PersonalDetailOptions label,
+.FindTableOptions label {
+    display: block;
+    margin-bottom: 0;
+    padding: 0; 
+}
+
+.MakeReservation {
+    display: block;
+    margin: 2.5% auto;
+    background-color: rgba(0 , 136 , 169 , 1); /* optional: Dorsia red */
+    color: 047998;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.MakeReservation:hover {
+    background-color: rgba(0 , 136 , 169 , 0.8); /* slightly darker on hover */
+}
+
+.Footer *{
+    background-color: #001c3d;
+}
+
+.Footer {
+    color: #FAF9F6;
+    border-top: 1px solid #FAF9F6;
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.FooterContent {
+    padding: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.FooterLogo {
+    display: flex;
+    align-items: center;
+}
+
+.FooterLogo img {
+    height: 144px;
+    width: 240px;
+    border-radius: 10px;
+}
+
+.FooterNav , .Hours , .FindUsHere {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Footer .FindUsHere .cta button{
+    size: 2rem;
+}
+
+.FooterLinks .MoreInfo{
+    font-size: 3rem;
+    font-family: "Parisienne" , sans-serif;
+    justify-content: flex-end;
+    display: inline-block;
+}
+
+.Hours .Hours{
+    font-size: 3rem;
+    list-style-type: none;
+    font-family: "Parisienne" , sans-serif;
+    display: inline-block;
+}
+
+.Hours li {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    list-style-type: none;
+}
+
+.FooterLinks {
+    list-style: none;
+    padding: 0;
+}
+
+.FooterLinks li {
+    list-style-type: none;
+    padding: 3.25% 0;
+}
+
+.FooterLinks a {
+    text-decoration: none;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #faf9f6;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease 0s;
+}
+
+.FooterLinks li a:hover{
+    color: #0088a9;
+}
+
+.Footer button {
+    font-size: 2rem;
+    background-color: #0088a9;
+}
+
+.Footer button:hover {
+    background-color: rgba(0 , 136 , 169 , 0.8);
+}
+
+.FooterContent::after {
+    content: "";
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #faf9f6;
+    opacity: 0.3;
+}
