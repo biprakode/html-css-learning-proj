@@ -27,9 +27,9 @@
                     <h2>Make A Reservation</h2>
                 </div>
                 
-                <form action="https://httpbin.org/get" method="get">
+                <form action="" method="">
                     <div class="FindTable">
-                            <form action="https://httpbin.org/get" method="get">
+                            <form action="" method="">
                                 <fieldset>
                                     <legend>Find A Table</legend>
                                     <div class="FindTableOptions">
@@ -127,22 +127,24 @@
                                     </div>
                                 </fieldset>
                                 
-                                <script>
-                                    const dateInput = document.getElementById("reservationDate");
-                                    const today = new Date().toISOString().split("T")[0];
-                                    dateInput.setAttribute("min", today);
-                                    dateInput.addEventListener("input", () => {
-                                        const selectedDate = new Date(dateInput.value);
-                                        if (selectedDate.getDay() === 0) {
-                                            alert("Dorsia is closed on Sundays. Please select another date.");
-                                            dateInput.value = "";
-                                        }
-                                    });
-                                </script>
-                                
-                                <button class="MakeReservation" type="submit" formaction="https://httpbin.org/post" formmethod="post">Make A Reservation</button>
+                                <button class="MakeReservation" type="submit" formaction="" formmethod="">Make A Reservation</button>
                             </form>
                     </div>
+            </div>
+        </section>
+
+        <section class="ReservationConfirmation">
+            <div class="ReservationConfirmationWrap">
+                <div class="ReservationConfirmationText">
+                    <h2>Reservation Confirmation</h2>
+                </div>
+                <div class="ReservationConfirmationDetails">
+                    <p>Your reservation has been successfully made!</p>
+                    <p>We look forward to welcoming you to Dorsia.</p>
+                </div>
+                <div class="homepageButton">
+                    <a href="../homepage.html" target="_blank" rel="noreferrer noopener"><button class="HomepageButton">Back to Homepage</button></a>
+                </div>
             </div>
         </section>
 
@@ -176,5 +178,6 @@
                 </div>
             </div>
         </section>
+        <script src="../../JS/Reserve.js"></script>
     </body>
 </html>

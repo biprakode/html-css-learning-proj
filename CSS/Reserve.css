@@ -217,8 +217,7 @@ fieldset .PersonalDetailOptions {
 .MakeReservation {
     display: block;
     margin: 2.5% auto;
-    background-color: rgba(0 , 136 , 169 , 1); /* optional: Dorsia red */
-    color: 047998;
+    background-color: rgba(0 , 136 , 169 , 1);
     font-size: 1.5rem;
     border-radius: 20px;
     cursor: pointer;
@@ -226,8 +225,63 @@ fieldset .PersonalDetailOptions {
 }
 
 .MakeReservation:hover {
-    background-color: rgba(0 , 136 , 169 , 0.8); /* slightly darker on hover */
+    background-color: rgba(0 , 136 , 169 , 0.8);
 }
+
+.ReservationConfirmationWrap * {
+    background-color: #8aaed7;
+}
+
+.ReservationConfirmationWrap {
+    /* animation-name: animateConfirmation;
+    animation-duration: 0.5s; */
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: #8aaed7;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 40%;
+    padding: 2.5%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ReservationConfirmationWrap .ReservationConfirmationText {
+    font-family: "Parisienne", sans-serif;
+    font-size: 2.5rem;
+    padding: 2.5%;
+    color: #0088a9;
+    text-align: center;
+}
+
+.ReservationConfirmationDetails p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: #FAF9F6;
+    text-align: center;
+}
+
+.homepageButton {
+    display: block;
+    margin: 5% auto; 
+    text-align: center;
+}
+
+/* 
+@keyframes animateConfirmation {
+    from {
+        opacity: 0;
+        top: -300px;
+    }
+    to {
+        opacity: 1;
+        top: 50%;
+    }
+} */
+
 
 .Footer *{
     background-color: #001c3d;
